@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Urbanist&family=Yellowtail&display=swap');
+
+:root {
+    --heading-font: 'Lilita One', sans-serif;
+    --body-font: 'Urbanist', sans-serif;
+    --logo: 'Yellowtail', cursive;
+    --black: #333333;
+    --pink: #f463bd;
+    --yellow: #f4f28d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: var(--body-font);
+}
+
+body {
+    background-color: var(--black);
+}
+
+header {
+    width: 100vw;
+    max-width: 100%;
+    height: 9vh;
+    font-family: var(--heading-font);
+    padding: 1rem;
+}
+
+ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+}
+
+li {
+    list-style: none;
+    color: var(--pink);
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+}
+
+.logo-box {
+    margin-right: auto;
+    font-family: var(--logo);
+    margin-bottom: 0px;
+    padding: 0px;
+    margin-left: 5px;
+}
+
+.logo {
+    height: 6vh;
+    width: auto;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100vw;
+}
+
+div img {
+    width: 100vw;
+    height: auto;
+    max-width: 100%;
+}
