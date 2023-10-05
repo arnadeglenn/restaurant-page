@@ -12,7 +12,7 @@
 #content {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 * {
@@ -35,7 +35,7 @@ header {
     padding: 1rem;
 }
 
-ul {
+.nav {
     display: flex;
     justify-content: end;
     align-items: center;
@@ -43,7 +43,7 @@ ul {
     flex-shrink: 0;
 }
 
-li {
+.nav li {
     list-style: none;
     color: var(--pink);
     font-family: var(--heading-font);
@@ -124,6 +124,7 @@ li {
 h2 {
     font-family: var(--heading-font);
     font-size: 2rem;
+    color: var(--yellow);
 }
 
 button {
@@ -151,6 +152,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 60px;
+    align-self: self-end;
 }
 
 .footer-logo {
@@ -160,7 +162,7 @@ footer {
 
 /* About Page */
 
-.about {
+.about, .order, .menu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -169,7 +171,7 @@ footer {
     gap: 2rem;
 }
 
-.portrait {
+.portrait, .order-portrait, .menu-portrait {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(379px, 1fr));
     gap: 30px;
@@ -187,13 +189,23 @@ footer {
     transition-duration: .5s;
 }
 
+.order-portrait:hover {
+    box-shadow: 0px 0px 15px var(--yellow);
+    transition-duration: .5s;
+}
+
+.menu-portrait:hover {
+    box-shadow: 0px 0px 15px var(--yellow);
+    transition-duration: .5s;
+}
+
 h1 {
-    color: var(--yellow);
+    color: var(--pink);
     font-size: 3rem;
     font-family: var(--heading-font);
 }
 
-.about-description {
+.about-description, .order-description, .menu-description {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -206,9 +218,10 @@ h1 {
 .about-description h2 {
     font-size: 2rem;
     text-align: center;
+    color: var(--yellow);
 }
 
-.portrait-img {
+.portrait-img, .order-img, .menu-img {
     width: clamp(200px, 30vw, 31vw);
     height: auto;
 }
@@ -217,6 +230,43 @@ h1 {
     font-size: 1.1rem;
     text-align: center;
 }
+
+/* Order Page */
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.order-list {
+    padding-left: 20px;
+}
+
+/* Menu Page */
+
+.menu-details {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.menu-description h2{
+    align-self: center;
+    text-align: center;
+}
+
+.menu-list {
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
 
 @media screen and (max-width: 1322px) {
     .portrait {
@@ -251,6 +301,72 @@ h1 {
     }
 }
 
+@media screen and (max-width: 1513px) {
+    .order-portrait{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        width: 40%;
+        max-width: 100%;
+        min-width: 300px;
+    }
+
+    .order-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px;
+        padding: 5px 5px 20px 5px;
+    }
+    
+    .order-description h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .order-img {
+        width: 100%;
+        min-width: 300px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1338px) {
+    .menu-portrait{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        width: 40%;
+        max-width: 100%;
+        min-width: 300px;
+    }
+
+    .menu-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px;
+        padding: 5px 5px 20px 5px;
+    }
+    
+    .menu-description h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .menu-img {
+        width: 100%;
+        min-width: 300px;
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 520px) {
     .cards {
         grid-template-columns: 1fr; /* Set a single column for mobile */
@@ -264,10 +380,7 @@ h1 {
 }
 
 @media screen and (max-width: 534px) {
-    li {
-        list-style: none;
-        color: var(--pink);
-        font-family: var(--heading-font);
+    .nav li {
         font-size: 1rem;
     }
     .logo-box {
