@@ -50,6 +50,12 @@ header {
     font-size: 1.8rem;
 }
 
+.nav li:hover {
+    cursor: pointer;
+    color: var(--yellow);
+    transition-duration: 1s;
+}
+
 .logo-box {
     margin-right: auto;
     font-family: var(--logo);
