@@ -15,18 +15,40 @@ const cardItem = [
     description: "Click the button below<br>to place an order!",
     button: "Order"}
 ];
-const contentDiv = document.getElementById('content');
-const homePageLoad = function () {
-    const heroDiv = document.createElement('div');
-    heroDiv.classList.add('hero');
-    contentDiv.appendChild(heroDiv);
 
-    
-    const heroImg = document.createElement('img');
-    heroImg.classList.add('hero-img');
-    heroImg.src = './assets/hero.png';
-    heroImg.alt = 'picture of filipino food';
-    heroDiv.appendChild(heroImg);
+const aboutPageLoad = function () {
+    const contentDiv = document.getElementById('content');
+
+    const aboutBox = document.createElement('div');
+    aboutBox.classList.add('about');
+    contentDiv.appendChild(aboutBox);
+
+    const titleBox = document.createElement('div');
+    titleBox.classList.add('title-box');
+    const h1Title = document.createElement('h1');
+    h1Title.innerHTML = "About";
+    aboutBox.appendChild(titleBox);
+    titleBox.appendChild(h1Title);
+
+    const portraitBox = document.createElement('div');
+    portraitBox.classList.add('portrait');
+    aboutBox.appendChild(portraitBox);
+
+    const portraitImg = document.createElement('img');
+    portraitImg.classList.add('portrait-img');
+    portraitImg.src = "./assets/chefs.png"
+    portraitImg.alt = "Chef's of shawnee's homestyle"
+    portraitBox.appendChild(portraitImg);
+
+    const aboutDescription = document.createElement('div');
+    aboutDescription.classList.add('about-description');
+    portraitBox.appendChild(aboutDescription);
+    const h2Title = document.createElement('h2');
+    h2Title.innerHTML = "What is Shawnee's Homestyle?";
+    aboutDescription.appendChild(h2Title);
+    const paraDescription = document.createElement('p');
+    paraDescription.innerHTML = "Shawnee's Homestyle is a kitchen out of Souhtern Califonia that specializes in homemade Filipino delicacies! Run by Elbi Balmaceda and Bryan Rapanut, they cater some of the most beloved foods out of the Northern Philippines in addition to the culture's quiessentials.<br><br>You might be wondering, who is Shawnee? Shawnee is the beloved golden retriver sous chef who is the main taster of all of Elbi and Bryan's creations! You will often find him in the kitchen waiting to try each batch with his elder sister, Layla!"
+    aboutDescription.appendChild(paraDescription);
 
     const cardDiv = document.createElement('div');
     cardDiv.classList.add('cards');
@@ -56,23 +78,5 @@ const homePageLoad = function () {
     }
     contentDiv.appendChild(cardDiv);
 }
-const footer = function() {
-    const footerBox = document.createElement('footer');
-    const footerDiv = document.createElement('div');
-    footerBox.appendChild(footerDiv);
 
-    const footerImg = document.createElement('img');
-    footerImg.classList.add('footer-logo');
-    footerImg.src = "./assets/logo.png";
-    footerImg.alt = "Shawnee's Homestyle";
-
-    const footerCredits = document.createElement('p');
-    footerCredits.innerHTML = "Website by Glenn Arnade";
-
-    contentDiv.appendChild(footerBox);
-    footerBox.appendChild(footerDiv);
-    footerDiv.appendChild(footerImg);
-    footerDiv.appendChild(footerCredits);
-    
-
-}
+export {aboutPageLoad};

@@ -20,17 +20,14 @@ const contentDiv = document.getElementById('content');
 
 const homePageLoad = function () {
     //header
-    const headerBox = document.createElement('header');
-    const navList = document.createElement('ul');
-    navList.classList.add('nav');
+    // const headerBox = document.createElement('header');
+    // const navList = document.createElement('ul');
+    // navList.classList.add('nav');
 
-    navList.innerHTML = "<li class='logo-box' href ='./indexedDB.html'><img class='logo' src='./assets/logo.png' alt='Shawnee Homestyle'></li>\
-                <li id='about-nav'>About</li>\
-                <li id='menu-nav'>Menu</li>\
-                <li id='order-nav'>Order</li>";
+    // navList.innerHTML = "";
 
-    headerBox.appendChild(navList);
-    contentDiv.appendChild(headerBox);
+    // headerBox.appendChild(navList);
+    // contentDiv.appendChild(headerBox);
     
     //body
     const heroDiv = document.createElement('div');
@@ -80,24 +77,24 @@ const homePageLoad = function () {
         contentDiv.removeChild(footerBox);
     })
 
-    //footer
-    const footerBox = document.createElement('footer');
-    footerBox.classList.add('footer-box');
-    const footerDiv = document.createElement('div');
-    footerBox.appendChild(footerDiv);
+    // //footer
+    // const footerBox = document.createElement('footer');
+    // footerBox.classList.add('footer-box');
+    // const footerDiv = document.createElement('div');
+    // footerBox.appendChild(footerDiv);
     
-    const footerImg = document.createElement('img');
-    footerImg.classList.add('footer-logo');
-    footerImg.src = "./assets/logo.png";
-    footerImg.alt = "Shawnee's Homestyle";
+    // const footerImg = document.createElement('img');
+    // footerImg.classList.add('footer-logo');
+    // footerImg.src = "./assets/logo.png";
+    // footerImg.alt = "Shawnee's Homestyle";
     
-    const footerCredits = document.createElement('p');
-    footerCredits.innerHTML = "Website by Glenn Arnade";
+    // const footerCredits = document.createElement('p');
+    // footerCredits.innerHTML = "Website by Glenn Arnade";
     
-    contentDiv.appendChild(footerBox);
-    footerBox.appendChild(footerDiv);
-    footerDiv.appendChild(footerImg);
-    footerDiv.appendChild(footerCredits);
+    // contentDiv.appendChild(footerBox);
+    // footerBox.appendChild(footerDiv);
+    // footerDiv.appendChild(footerImg);
+    // footerDiv.appendChild(footerCredits);
 }
 
 export {homePageLoad};

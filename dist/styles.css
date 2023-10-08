@@ -9,7 +9,7 @@
     --yellow: #f4f28d;
 }
 
-.everything {
+.body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
