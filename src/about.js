@@ -17,7 +17,7 @@ const cardItem = [
     {imageCard: "./assets/menu.png",
     alt: "menu graphic", 
     title: "Menu", 
-    description: "Click the button below<br>to place an order!",
+    description: "Click the button below<br>to view the menu!",
     button: "Menu"}
 ];
 
