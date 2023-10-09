@@ -52,7 +52,7 @@ const aboutPageLoad = function () {
     h2Title.innerHTML = "What is Shawnee's Homestyle?";
     aboutDescription.appendChild(h2Title);
     const paraDescription = document.createElement('p');
-    paraDescription.innerHTML = "Shawnee's Homestyle is a kitchen out of Souhtern Califonia that specializes in homemade Filipino delicacies! Run by Elbi Balmaceda and Bryan Rapanut, they cater some of the most beloved foods out of the Northern Philippines in addition to the culture's quiessentials.<br><br>You might be wondering, who is Shawnee? Shawnee is the beloved golden retriver sous chef who is the main taster of all of Elbi and Bryan's creations! You will often find him in the kitchen waiting to try each batch with his elder sister, Layla!"
+    paraDescription.innerHTML = "Shawnee's Homestyle is a kitchen out of Southern Califonia that specializes in homemade Filipino delicacies! Run by Elbi Balmaceda and Bryan Rapanut, they cater some of the most beloved foods out of the Northern Philippines in addition to the culture's quiessentials.<br><br>You might be wondering, who is Shawnee? Shawnee is the beloved golden retriver sous chef who is the main taster of all of Elbi and Bryan's creations! You will often find him in the kitchen waiting to try each batch with his elder sister, Layla!"
     aboutDescription.appendChild(paraDescription);
 
     const cardDiv = document.createElement('div');
