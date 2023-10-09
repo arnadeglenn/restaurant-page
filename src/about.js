@@ -1,3 +1,8 @@
+import { homePageLoad } from "./home";
+import { orderPageLoad } from "./order";
+import { footerLoad } from "./footer";
+import { menuPageLoad } from "./menu";
+
 const cardItem = [
     {imageCard: "./assets/home.png",
     alt: "filipino bus", 
@@ -13,7 +18,7 @@ const cardItem = [
     alt: "menu graphic", 
     title: "Menu", 
     description: "Click the button below<br>to place an order!",
-    button: "Order"}
+    button: "Menu"}
 ];
 
 const aboutPageLoad = function () {
@@ -68,6 +73,8 @@ const aboutPageLoad = function () {
         cardDescrip.innerHTML = `${cardItem[i].description}`;
 
         let cardBtn = document.createElement('button');
+        cardBtn.classList.add('card-btn');
+        cardBtn.classList.add(`button-${i}`);
         cardBtn.innerHTML = `${cardItem[i].button}`;
 
         cardDiv.appendChild(card);
@@ -77,6 +84,31 @@ const aboutPageLoad = function () {
         card.appendChild(cardBtn);
     }
     contentDiv.appendChild(cardDiv);
+
+    const homeButton = document.querySelector('.button-0');
+    const orderButton = document.querySelector('.button-1');
+    const menuButton = document.querySelector('.button-2');
+    
+    homeButton.addEventListener('click', (e) => {
+        contentDiv.innerHTML = '';
+        homePageLoad();
+        footerLoad();
+        console.log('About Page Loaded');
+    })
+
+    orderButton.addEventListener('click', (e) => {
+        contentDiv.innerHTML = '';
+        orderPageLoad();
+        footerLoad();
+        console.log('Order Page Loaded');
+    })
+
+    menuButton.addEventListener('click', (e) => {
+        contentDiv.innerHTML = '';
+        menuPageLoad();
+        footerLoad();
+        console.log('Menu Page Loaded');
+    })
 }
 
 export {aboutPageLoad};

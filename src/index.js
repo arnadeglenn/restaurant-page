@@ -2,6 +2,7 @@ import { homePageLoad } from "./home";
 import { aboutPageLoad } from "./about";
 import { orderPageLoad } from "./order";
 import { footerLoad } from "./footer";
+import { menuPageLoad } from "./menu";
 
 const aboutNav = document.getElementById('about-nav');
 const menuNav = document.getElementById('menu-nav');
@@ -37,6 +38,12 @@ orderNav.addEventListener('click', (e) => {
     console.log('Order Page Loaded');
 })
 
+menuNav.addEventListener('click', (e) => {
+    contentDiv.innerHTML = '';
+    menuPageLoad();
+    footerLoad();
+    console.log('Menu Page Loaded')
+})
 
 
 

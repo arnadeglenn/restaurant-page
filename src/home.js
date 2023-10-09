@@ -1,3 +1,8 @@
+import { aboutPageLoad } from "./about";
+import { orderPageLoad } from "./order";
+import { footerLoad } from "./footer";
+import { menuPageLoad } from "./menu";
+
 const cardItem = [
     {imageCard: "./assets/chefs.png",
     alt: "the chefs", 
@@ -19,17 +24,6 @@ const cardItem = [
 const contentDiv = document.getElementById('content');
 
 const homePageLoad = function () {
-    //header
-    // const headerBox = document.createElement('header');
-    // const navList = document.createElement('ul');
-    // navList.classList.add('nav');
-
-    // navList.innerHTML = "";
-
-    // headerBox.appendChild(navList);
-    // contentDiv.appendChild(headerBox);
-    
-    //body
     const heroDiv = document.createElement('div');
     heroDiv.classList.add('hero');
     contentDiv.appendChild(heroDiv);
@@ -69,32 +63,32 @@ const homePageLoad = function () {
         card.appendChild(cardBtn);
     }
     contentDiv.appendChild(cardDiv);
+    
     const aboutButton = document.querySelector('.button-0');
+    const orderButton = document.querySelector('.button-1');
+    const menuButton = document.querySelector('.button-2');
+    
     aboutButton.addEventListener('click', (e) => {
-        contentDiv.removeChild(heroDiv);
-        contentDiv.removeChild(cardDiv);
-        const footerBox = document.querySelector('.footer-box');
-        contentDiv.removeChild(footerBox);
+        contentDiv.innerHTML = '';
+        aboutPageLoad();
+        footerLoad();
+        console.log('About Page Loaded');
     })
 
-    // //footer
-    // const footerBox = document.createElement('footer');
-    // footerBox.classList.add('footer-box');
-    // const footerDiv = document.createElement('div');
-    // footerBox.appendChild(footerDiv);
-    
-    // const footerImg = document.createElement('img');
-    // footerImg.classList.add('footer-logo');
-    // footerImg.src = "./assets/logo.png";
-    // footerImg.alt = "Shawnee's Homestyle";
-    
-    // const footerCredits = document.createElement('p');
-    // footerCredits.innerHTML = "Website by Glenn Arnade";
-    
-    // contentDiv.appendChild(footerBox);
-    // footerBox.appendChild(footerDiv);
-    // footerDiv.appendChild(footerImg);
-    // footerDiv.appendChild(footerCredits);
+    orderButton.addEventListener('click', (e) => {
+        contentDiv.innerHTML = '';
+        orderPageLoad();
+        footerLoad();
+        console.log('Order Page Loaded');
+    })
+
+    menuButton.addEventListener('click', (e) => {
+        contentDiv.innerHTML = '';
+        menuPageLoad();
+        footerLoad();
+        console.log('Menu Page Loaded');
+    })
+
 }
 
 export {homePageLoad};
